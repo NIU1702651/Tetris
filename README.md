@@ -1,2 +1,2 @@
 # Tetris
-Tetris en C++
+Tetris en C++ per a activitat universitària
