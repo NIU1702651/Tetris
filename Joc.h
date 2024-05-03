@@ -1,25 +1,31 @@
 #ifndef JOC_H
 #define JOC_H
-#include "tauler.h"
-#include "figura.h"
+#include "Tauler.h"
+#include "Figura.h"
+#include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
+
 class Joc
 {
+    
 public:
-	Joc() {}
-	~Joc() {}
+
+	Joc() { m_posicio.vertical = 0; m_posicio.horitzontal = 0; m_figuraCollocada = false; }
 	void inicialitza(const string& nomFitxer);
+	
 	bool giraFigura(DireccioGir direccio);
 	bool mouFigura(int dirX);
 	int baixaFigura();
+	
 	void escriuTauler(const string& nomFitxer);
+
 private:
-	Tauler m_taulerJoc;
-	Figura* m_figuraActual = nullptr;
-	int punts, nivell;
+	Tauler m_tauler;
+	Figura m_figura;
+	Posicio m_posicio;
+	bool m_figuraCollocada;
 };
-ifstream& operator>>(ifstream& input, Figura& figura);
-ifstream& operator>>(ifstream& input, Tauler& tauler);
-ofstream& operator<<(ofstream& output, Tauler& tauler);
-#endif // JOC_H
+
+#endif
