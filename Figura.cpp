@@ -1,6 +1,6 @@
 #include "Figura.h"
 
-// Aquest mètode ens permet reinicialitzar una figura existent amb un nou tipus de figura.
+
 
 
 // Aquí definim el constructor predeterminat de la classe Figura. Quan creem una nova figura, tot es posa a zero o buit.
